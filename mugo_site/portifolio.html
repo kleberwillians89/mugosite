@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfólio | Mugô</title>
+  <script src="https://cdn.tailwindcss.com/3.4.16"></script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css" rel="stylesheet">
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: "#004f6e",
+            'primary-dark': "#003b54",
+            secondary: "#c79830",
+            steel: "#5B6770",
+            neutral: "#F5F5F5",
+          },
+          fontFamily: {
+            'sans': ['Garet', 'sans-serif'],
+            'display': ['Anton', 'sans-serif'],
+          },
+          borderRadius: {
+            button: "8px",
+          },
+        },
+      },
+    };
+  </script>
+
+  <style>
+    @font-face {
+      font-family: 'Garet';
+      src: url('https://public.readdy.ai/fonts/Garet-Book.woff2') format('woff2');
+      font-weight: normal;
+    }
+
+    @font-face {
+      font-family: 'Garet';
+      src: url('https://public.readdy.ai/fonts/Garet-Heavy.woff2') format('woff2');
+      font-weight: bold;
+    }
+
+    body {
+      font-family: 'Garet', sans-serif;
+    }
+
+    .hero-bg-animation {
+      animation: zoomInOut 20s ease-in-out infinite;
+    }
+
+    @keyframes zoomInOut {
+      0%,
+      100% {
+        transform: scale(1);
+      }
+      50% {
+        transform: scale(1.1);
+      }
+    }
+
+    .service-card {
+      transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+    }
+
+    .contact-input:focus {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 25px rgba(0, 79, 110, 0.1);
+    }
+
+    .social-icon:hover {
+      transform: scale(1.1);
+      background-color: white;
+      color: #004f6e;
+    }
+
+    header nav a {
+      color: #004f6e;
+      transition: color 0.3s ease-in-out;
+    }
+
+    header nav a:hover {
+      color: #c79830;
+    }
+
+    .bg-primary {
+      background-color: #004f6e;
+    }
+
+    .bg-primary:hover {
+      background-color: #003b54;
+    }
+
+    .rounded-button {
+      border-radius: 8px;
+    }
+
+    .whatsapp-button {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background-color: #c79830;
+      color: #004f6e;
+      font-weight: bold;
+      padding: 15px 20px;
+      border-radius: 30px;
+      text-decoration: none;
+      box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2);
+      z-index: 50;
+      font-size: 16px;
+      display: flex;
+      align-items: center;
+      transition: all 0.3s ease;
+    }
+
+    .whatsapp-button:hover {
+      background-color: #af852a;
+      transform: scale(1.05);
+    }
+  </style>
+</head>
+
+<body class="bg-white">
+
+  <header class="fixed top-0 left-0 right-0 bg-primary backdrop-blur-sm shadow-md z-50">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="flex items-center justify-between h-20">
+        <a href="index2.html" class="text-3xl font-bold text-secondary">
+          <img src="assets/MUGÔ_LOGO (4).png" alt="Logo Mugô" class="h-40 object-contain">
+        </a>
+        <nav class="hidden md:flex space-x-8">
+          <a href="index2.html#sobre" class="text-lg font-semibold text-neutral hover:text-secondary transition-colors">Sobre</a>
+          <a href="index2.html#servicos" class="text-lg font-semibold text-neutral hover:text-secondary transition-colors">Serviços</a>
+          <a href="portifolio.html" class="text-lg font-semibold text-neutral hover:text-secondary transition-colors">Projetos</a>
+          <a href="index2.html#contato" class="text-lg font-semibold text-neutral hover:text-secondary transition-colors">Contato</a>
+        </nav>
+        <button class="md:hidden w-10 h-10 flex items-center justify-center text-neutral">
+          <i class="ri-menu-line text-2xl"></i>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <section id="portfolio" class="py-20 bg-neutral mt-20">
+    <div class="max-w-7xl mx-auto px-6">
+      <h2 class="text-4xl font-bold text-center text-primary mb-12">Alguns dos nossos clientes</h2>
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10">
+
+        <div class="bg-white rounded-2xl shadow-lg overflow-hidden">
+          <img src="assets/bruna.png" alt="Bruna Alimonda" class="w-full h-64 object-cover">
+          <div class="p-6">
+            <h3 class="text-xl font-bold text-primary mb-2">Bruna Alimonda</h3>
+            <p class="text-gray-600 mb-4">Conceito visual e direção de arte para projeto autoral de moda e performance.</p>
+            <a href="https://www.instagram.com/brunaalimonda" target="_blank" class="text-primary font-semibold hover:underline">Ver projeto →</a>
+          </div>
+        </div>
+
+        <div class="bg-white rounded-2xl shadow-lg overflow-hidden">
+          <img src="assets/pieta.png" alt="Pietá" class="w-full h-64 object-cover">
+          <div class="p-6">
+            <h3 class="text-xl font-bold text-primary mb-2">Pietá</h3>
+            <p class="text-gray-600 mb-4">Campanha artística com colagem, moda e cultura pop em fusão audiovisual.</p>
+            <a href="https://www.instagram.com/pieta_" target="_blank" class="text-primary font-semibold hover:underline">Ver projeto →</a>
+          </div>
+        </div>
+
+        <div class="bg-white rounded-2xl shadow-lg overflow-hidden">
+          <img src="assets/rodrigo.png" alt="Rodrigo Mancusi" class="w-full h-64 object-cover">
+          <div class="p-6">
+            <h3 class="text-xl font-bold text-primary mb-2">Rodrigo Mancusi</h3>
+            <p class="text-gray-600 mb-4">Visual conceitual e trilha para o álbum "Noções da Longe", premiado em 2024.</p>
+            <a href="https://www.instagram.com/rodrigomancusi" target="_blank" class="text-primary font-semibold hover:underline">Ver projeto →</a>
+          </div>
+        </div>
+
+        <div class="bg-white rounded-2xl shadow-lg overflow-hidden">
+          <img src="assets/treelife.png" alt="Treelife Pharmah" class="w-full h-64 object-cover">
+          <div class="p-6">
+            <h3 class="text-xl font-bold text-primary mb-2">Treelife Pharmah</h3>
+            <p class="text-gray-600 mb-4">Rebranding completo, site, e campanhas de performance para e-commerce de suplementos.</p>
+            <a href="https://www.instagram.com/treelife_pharmah" target="_blank" class="text-primary font-semibold hover:underline">Ver projeto →</a>
+          </div>
+        </div>
+
+        <div class="bg-white rounded-2xl shadow-lg overflow-hidden">
+          <img src="assets/conexaocriativa.png" alt="Conexão Saúde" class="w-full h-64 object-cover">
+          <div class="p-6">
+            <h3 class="text-xl font-bold text-primary mb-2">Conexão Saúde</h3>
+            <p class="text-gray-600 mb-4">Campanhas para psicologia infantil e redes sociais da clínica com foco em empatia.</p>
+            <a href="https://www.instagram.com/conexaosaudeintegrada" target="_blank" class="text-primary font-semibold hover:underline">Ver projeto →</a>
+          </div>
+        </div>
+
+        <div class="bg-white rounded-2xl shadow-lg overflow-hidden">
+          <img src="assets/MUGÔ_POSTS_MANO_A_MANA.jpg" alt="Mano a Mana" class="w-full h-64 object-cover">
+          <div class="p-6">
+            <h3 class="text-xl font-bold text-primary mb-2">Mano a Mana</h3>
+            <p class="text-gray-600 mb-4">Estratégia, branding e divulgação para coletivo de arte e cultura periférica.</p>
+            <a href="https://www.instagram.com/manoamana" target="_blank" class="text-primary font-semibold hover:underline">Ver projeto →</a>
+          </div>
+        </div>
+
+        <div class="bg-white rounded-2xl shadow-lg overflow-hidden">
+          <img src="assets/FLYER_LULA.jpg" alt="Luz na Obra" class="w-full h-64 object-cover">
+          <div class="p-6">
+            <h3 class="text-xl font-bold text-primary mb-2">Luz na Obra</h3>
+            <p class="text-gray-600 mb-4">Campanha digital para exposição de arte em homenagem ao músico Lula Queiroga.</p>
+            <a href="https://www.instagram.com/luznaobra" target="_blank" class="text-primary font-semibold hover:underline">Ver projeto →</a>
+          </div>
+        </div>
+
+        <div class="bg-white rounded-2xl shadow-lg overflow-hidden">
+          <img src="assets/vox.png" alt="Vox Strategy" class="w-full h-64 object-cover">
+          <div class="p-6">
+            <h3 class="text-xl font-bold text-primary mb-2">Vox Strategy</h3>
+            <p class="text-gray-600 mb-4">Assessoria de comunicação estratégica e relações públicas.</p>
+            <a href="https://www.voxstrategy.com.br/" target="_blank" class="text-primary font-semibold hover:underline">Ver site →</a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <footer class="bg-primary py-12">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="flex flex-col md:flex-row items-center justify-between text-center md:text-left">
+        <div class="mb-6 md:mb-0">
+          <a href="index2.html" class="text-white text-4xl font-black">
+            <img src="assets/MUGÔ_LOGO (4).png" alt="Logo Mugô" class="h-20 object-contain">
+          </a>
+        </div>
+        <div class="text-center mb-6 md:mb-0">
+          <p class="text-white text-lg">
+            Morumbi – São Paulo | Desenvolvido por <span class="font-bold">Mugô</span>
+          </p>
+        </div>
+        <div class="flex space-x-4">
+          <a href="https://www.instagram.com/mugo.ag/#" target="_blank"
+            class="social-icon w-12 h-12 flex items-center justify-center bg-white bg-opacity-20 rounded-lg text-white transition-all">
+            <i class="ri-instagram-line text-xl"></i>
+          </a>
+          <a href="https://www.linkedin.com/company/mug%C3%B4-ag/posts/?feedView=all" target="_blank" class="social-icon w-12 h-12 flex items-center justify-center bg-white bg-opacity-20 rounded-lg text-white transition-all">
+            <i class="ri-linkedin-line text-xl"></i>
+          </a>
+          <a href="https://wa.me/5511973510549" target="_blank"
+            class="social-icon w-12 h-12 flex items-center justify-center bg-white bg-opacity-20 rounded-lg text-white transition-all">
+            <i class="ri-whatsapp-line text-xl"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <a href="https://wa.me/5511973510549" target="_blank" class="whatsapp-button">
+    <i class="ri-whatsapp-line mr-2"></i> Converse conosco agora mesmo
+  </a>
+
+</body>
+
+</html>
